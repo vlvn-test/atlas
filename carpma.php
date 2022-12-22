@@ -11,6 +11,7 @@ function topla() {
 
 function carpma() {
   $carpim = 1;
+  $carpim2 = 1;
   $argumanSayisi = func_num_args();
   for ($i = 0; $i < $argumanSayisi; $i ++) {
     $carpim *= func_get_arg($i);
