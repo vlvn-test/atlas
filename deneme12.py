@@ -1,1 +1,3 @@
-deneme.120
+#deneme.120000
+print("hi")
+
