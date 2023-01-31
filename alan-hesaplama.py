@@ -13,3 +13,8 @@ yazili2 = int(input('2. Yazılı : '))
 yazili3 = int(input('3. Yazılı : '))
 ortalama=(yazili1+yazili2+yazili3)/3
 print("Yazılı Ortalaması :{0} ".format(ortalama))
+
+
+1234567654321
+32587943268793
+23409579382
