@@ -12,9 +12,6 @@ elif meyve ==("elma"):
          kilo = int(input("Kaç kilo sarı elma istiyorsun?"))
      elif renk ==("yeşil"):
          kilo = int(input("Kaç kilo yeşil elma istiyorsun?"))
-     else:
-         print("Sadece sarı, kırmızı ya da yeşil renk elma var.")
-
      print(kilo*2,"tl ücret ödeyeceksiniz.")
 
 elif meyve == ("üzüm"):
