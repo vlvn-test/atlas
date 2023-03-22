@@ -16,5 +16,6 @@ print("Yazılı Ortalaması :{0} ".format(ortalama))
 
 
 1234567654321234
-3258794326879334
-234095793825673456
+325879425673456
+pdkcds
+kjfdsl
