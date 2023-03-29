@@ -14,8 +14,8 @@ yazili3 = int(input('3. Yazılı : '))
 ortalama=(yazili1+yazili2+yazili3)/3
 print("Yazılı Ortalaması :{0} ".format(ortalama))
 
+release 1.0 daki issue'yu kapatmak icin atılan commit
 
-1234567654321234
 325879425673456
 pdkcds
 kjfdsl
