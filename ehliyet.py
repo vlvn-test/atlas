@@ -10,7 +10,3 @@ laksjflesjka oıtjesrlkfmdpoıkms rgmfdşs
 otrskjgmçöfd
 
 esşrklgmçöfd vc,
-
-esşrklgmçöfd vc
-kasjdla0932 90874092 kwejfdlks 839250jekwlmfes
-sşalkfeşl
