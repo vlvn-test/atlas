@@ -4,7 +4,6 @@ import {
   isObject,
   parsePath,
   _Set as Set,
-  handleError,
   invokeWithErrorHandling,
   noop,
   isFunction
