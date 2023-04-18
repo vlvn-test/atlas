@@ -15,17 +15,4 @@ ortalama=(yazili1+yazili2+yazili3)/3
 print("Yazılı Ortalaması :{0} ".format(ortalama))
 
 release 1.0 daki issue'yu kapatmak icin atılan commit
-ljadsldk
-325879425673456
-pdkcds
 
-
-
-jasdlkaşf
-lksjflkajşas
-rıwuoıfjewoıwoue
-kjlkdsajfkaldlkkk
-11111111111111111111111111111
-2222222222222222222222222222
-3333333333333333333333333333
-44444444444444444444444444444
