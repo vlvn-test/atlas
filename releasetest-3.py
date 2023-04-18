@@ -18,7 +18,6 @@ import {
 } from '../util/index'
 import { currentInstance, setCurrentInstance } from 'v3/currentInstance'
 import { syncSetupProxy } from 'v3/apiSetup'
-export let activeInstance: any = null
 export let isUpdatingChildComponent: boolean = false
 export function setActiveInstance(vm: Component) {
   const prevActiveInstance = activeInstance

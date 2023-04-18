@@ -20,14 +20,10 @@ class ChannelsThread(QThread):
         self.onFinish.emit('')
 
 
-class StreamsThread(QThread):
+#class StreamsThread(QThread):
     onStart = pyqtSignal(str)
     onScrapping = pyqtSignal(list)
     onFinish = pyqtSignal(str)
-
-    def __init__(self, url):
-        super().__init__()
-        self.url = url
 
     def run(self):
         self.onStart.emit("Loading streams ..")
@@ -71,11 +67,6 @@ class MainWindow(QMainWindow):
         self.streams_thread.onFinish.connect(lambda msg: self.statusbar.showMessage(msg))
         self.streams_thread.onScrapping.connect(lambda streams: self.on_scrapped_streams(streams))
         self.streams_thread.start()
-
-    def on_scrapped_channels(self, channels):
-        self.channels = channels
-        for channel in self.channels:
-            self.cb_channels.addItem(channel['name'])
 
     def on_scrapped_streams(self, streams):
         self.lw_streams.clear()
