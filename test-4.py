@@ -4,7 +4,6 @@ import {
   isObject,
   parsePath,
   _Set as Set,
-  handleError,
   invokeWithErrorHandling,
   noop,
   isFunction
@@ -244,21 +243,16 @@ export default class Watcher implements DepTarget {
     }
   }
   /**
-   * Remove self from all dependencies' subscriber list.
-   */
-  teardown() {
-    if (this.vm && !this.vm._isBeingDestroyed) {
-      remove(this.vm._scope.effects, this)
-    }
-    if (this.active) {
-      let i = this.deps.length
-      while (i--) {
-        this.deps[i].removeSub(this)
-      }
-      this.active = false
-      if (this.onStop) {
-        this.onStop()
-      }
-    }
-  }
-}
+   * Remove self from all dependencies' subscriber listsldjf
+   lskfjkamn
+   395798347598327
+   sdjfnjksdh45798374502
+   63546589372
+   32598943
+   4568345
+   4*382
+   40693*0o
+   57*0956o333789*064
+   *9483*2ı0-t4
+   60593-*09-43
+   2*8056*02-
