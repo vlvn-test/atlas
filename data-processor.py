@@ -40,5 +40,4 @@ while True:
     elif choice == "4":
         print("Uygulamadan çıkılıyor...")
         break
-    else:
-        print("Geçersiz seçim. Lütfen tekrar deneyin.")
+    23907482
