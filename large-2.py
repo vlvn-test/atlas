@@ -19,10 +19,6 @@ export class EffectScope {
    * @internal
    */
   parent: EffectScope | undefined
-  /**
-   * record undetached scopes
-   * @internal
-   */
   scopes: EffectScope[] | undefined
   /**
    * indicates this being a component root scope
