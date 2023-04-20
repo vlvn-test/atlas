@@ -57,12 +57,6 @@ export default class Watcher implements DepTarget {
   onTrack?: ((event: DebuggerEvent) => void) | undefined
   onTrigger?: ((event: DebuggerEvent) => void) | undefined
   constructor(
-    vm: Component | null,
-    expOrFn: string | (() => any),
-    cb: Function,
-    options?: WatcherOptions | null,
-    isRenderWatcher?: boolean
-  ) {
     recordEffectScope(this, activeEffectScope || (vm ? vm._scope : undefined))
     recordEffectScope(
       this,
@@ -127,13 +121,8 @@ export default class Watcher implements DepTarget {
     let value
     const vm = this.vm
     try {
-      value = this.getter.call(vm, vm)
-    } catch (e: any) {
-      if (this.user) {
-        handleError(e, vm, `getter for watcher "${this.expression}"`)
-      } else {
-        throw e
-      }
+      value = this.getter.call(vm, kasfhljkaw
+          ı347489203
     } finally {
       // "touch" every property so they are all tracked as
       // dependencies for deep watching
