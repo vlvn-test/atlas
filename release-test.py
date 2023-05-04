@@ -19,41 +19,6 @@ class ChannelsThread(QThread):
 
         self.onFinish.emit('')
 
-
-#class StreamsThread(QThread):
-    onStart = pyqtSignal(str)
-    onScrapping = pyqtSignal(list)
-    onFinish = pyqtSignal(str)
-
-    def run(self):
-        self.onStart.emit("Loading streams ..")
-
-        streams = get_streams(self.url)
-        self.onScrapping.emit(streams)
-
-        self.onFinish.emit('')
-
-
-class MainWindow(QMainWindow):
-    cb_channels: QComboBox
-    lw_streams: QListWidget
-    statusbar: QStatusBar
-    channels_thread: ChannelsThread
-    streams_thread: StreamsThread
-    channels = list()
-
-    def __init__(self, flags=None, *args, **kwargs):
-        super().__init__(flags, *args, **kwargs)
-
-        uic.loadUi('form.ui', self)
-        self.initialise()
-
-    def initialise(self):
-        self.set_channels()
-        self.cb_channels.currentIndexChanged.connect(
-            lambda i: self.set_streams(self.channels[i]['url'])
-        )
-
     def set_channels(self):
         self.channels_thread = ChannelsThread()
         self.channels_thread.onStart.connect(lambda msg: self.statusbar.showMessage(msg))
