@@ -5,4 +5,3 @@ dizi2=yazı.split(",")#Parantez içerisine herhangi bir şey yazıldığında o 
 print(dizi1)
 print(dizi2)
 
-dizi2=yazı.split(",")#Parantez içeri yazıldığında o karakteri ayraç olarak görür ve dizi oluşturur.
