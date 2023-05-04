@@ -23,28 +23,7 @@ export class EffectScope {
    * record undetached scopes
    * @internal
    */
-  scopes: EffectScope[] | undefined
-  /**
-   * indicates this being a component root scope
-   * @internal
-   */
-  _vm?: boolean
-  /**
-   * track a child scope's index in its parent's scopes array for optimized
-   * removal
-   * @internal
-   */
-  private index: number | undefined
-
-  constructor(detached = false) {
-    if (!detached && activeEffectScope) {
-      this.parent = activeEffectScope
-      this.index =
-        (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(
-          this
-        ) - 1
-    }
-  }
+  
   run<T>(fn: () => T): T | undefined {
     if (this.active) {
       const currentEffectScope = activeEffectScope
