@@ -3,9 +3,6 @@ def ciftMi(x):
 
  self.emit("int res;", depth+1)
         if field.seq:
-            self.emit("Py_ssize_t len;", depth+1)
-            self.emit("Py_ssize_t i;", depth+1)
-            self.emit("if (!PyList_Check(tmp)) {", depth+1)
             self.emit("PyErr_Format(PyExc_TypeError, \"%s field \\\"%s\\\" must "
                       "be a list, not a %%.200s\", _PyType_Name(Py_TYPE(tmp)));" %
                       (name, field.name),
