@@ -2,17 +2,6 @@ import Watcher from 'core/observer/watcher'
 import { warn } from 'core/util'
 export let activeEffectScope: EffectScope | undefined
 export class EffectScope {
-  /**
-   * @internal
-   */
-  active = true
-  /**
-   * @internal
-   */
-  effects: Watcher[] = []
-  /**
-   * @internal
-   */
   cleanups: (() => void)[] = []
   /**
    * only assigned by undetached scope
