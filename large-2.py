@@ -2,6 +2,9 @@ import Watcher from 'core/observer/watcher'
 import { warn } from 'core/util'
 export let activeEffectScope: EffectScope | undefined
 export class EffectScope {
+        dslokfşsd
+        kmşrwokdsfş
+        387502
   cleanups: (() => void)[] = []
   /**
    * only assigned by undetached scope

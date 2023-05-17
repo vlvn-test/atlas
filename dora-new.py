@@ -1,6 +1,6 @@
 def ciftMi(x): 
     return x 
-
+ajlısdj
  self.emit("int res;", depth+1)
         if field.seq:
             self.emit("PyErr_Format(PyExc_TypeError, \"%s field \\\"%s\\\" must "
