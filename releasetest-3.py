@@ -1,13 +1,4 @@
-import config from '../config'
-import Watcher, { WatcherOptions } from '../observer/watcher'
-import { mark, measure } from '../util/perf'
-import VNode, { createEmptyVNode } from '../vdom/vnode'
-import { updateComponentListeners } from './events'
-import { resolveSlots } from './render-helpers/resolve-slots'
-import { toggleObserving } from '../observer/index'
-import { pushTarget, popTarget } from '../observer/dep'
-import type { Component } from 'types/component'
-import type { MountedComponentVNode } from 'types/vnode'
+
 import {
   warn,
   noop,
