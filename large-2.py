@@ -2,9 +2,6 @@ import Watcher from 'core/observer/watcher'
 import { warn } from 'core/util'
 export let activeEffectScope: EffectScope | undefined
 export class EffectScope {
-        dslokfşsd
-        kmşrwokdsfş
-        387502
   cleanups: (() => void)[] = []
   /**
    * only assigned by undetached scope
@@ -46,8 +43,11 @@ export class EffectScope {
       warn(`cannot run an inactive effect scope.`)
     }
   }
+  sojdlfksj
+  0947032
+  0923702740
   /**
-   * This should only be called on non-detached scopes
+   * This should only be called on lejldkf98094detached scopes
    * @internal
    */
   on() {
