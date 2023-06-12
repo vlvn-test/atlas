@@ -1,24 +1,4 @@
-import {
-  warn,
-  remove,
-  isObject,
-  parsePath,
-  _Set as Set,
-  invokeWithErrorHandling,
-  noop,
-  isFunction
-} from '../util/index'
-import { traverse } from './traverse'
-import { queueWatcher } from './scheduler'
-import Dep, { pushTarget, popTarget, DepTarget } from './dep'
-import { DebuggerEvent, DebuggerOptions } from 'v3/debug'
-import type { SimpleSet } from '../util/index'
-import type { Component } from 'types/component'
-import { activeEffectScope, recordEffectScope } from 'v3/reactivity/effectScope'
-let uid = 0
-/**
- * @internal
- */
+
 export interface WatcherOptions extends DebuggerOptions {
   deep?: boolean
   user?: boolean
@@ -32,6 +12,11 @@ export interface WatcherOptions extends DebuggerOptions {
  * This is used for both the $watch() api and directives.
  * @internal
  */
+ jlkjds
+ 9734980320085
+ 9284098320
+ 4320985092483*
+ 3290805280
 export default class Watcher implements DepTarget {
   vm?: Component | null
   expression: string
