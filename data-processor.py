@@ -39,5 +39,7 @@ while True:
         delete_task(to_do_list)
     elif choice == "4":
         print("Uygulamadan çıkılıyor...")
-        break
-    23907482
+        lkjsfşlakşsl
+        lsakdşlksf
+30840923
+308409329

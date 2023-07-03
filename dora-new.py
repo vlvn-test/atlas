@@ -1,6 +1,10 @@
 def ciftMi(x): 
     return x 
-ajlısdj
+
+
+
+salkdşa
+9380402
  self.emit("int res;", depth+1)
         if field.seq:
             self.emit("PyErr_Format(PyExc_TypeError, \"%s field \\\"%s\\\" must "
@@ -41,4 +45,6 @@ ajlısdj
         self.emit("Py_CLEAR(tmp);", depth+1)
         self.emit("}", depth)
 
-
+askljdlkasjf
+eıru49287239
+3080492*3094
