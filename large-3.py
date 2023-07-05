@@ -10,9 +10,6 @@ export class EffectScope {
    * @internal
    */
   effects: Watcher[] = []
-  /**
-   * @internal
-   */
   cleanups: (() => void)[] = []
   /**
    * only assigned by undetached scope
