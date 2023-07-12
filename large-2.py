@@ -1,9 +1,5 @@
 import Watcher from 'core/observer/watcher'
-import { warn } from 'core/util'
-
-askjdlk
-kjlkdfj
-ksdjflkf
+djflkf
 o09043
 export let activeEffectScope: EffectScope | undefined
 export class EffectScope {

@@ -1,3 +1,7 @@
+
+şakjdfş
+şakdşfa
+lkjflka
 import Watcher from 'core/observer/watcher'
 import { warn } from 'core/util'
   effects: Watcher[] = []
