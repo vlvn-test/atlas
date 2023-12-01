@@ -1,8 +1,4 @@
 
-dsadas
-dasdas
-
-
 export interface WatcherOptions extends DebuggerOptions {
   deep?: boolean
   user?: boolean
