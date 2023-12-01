@@ -1,4 +1,24 @@
-
+import {
+  warn,
+  remove,
+  isObject,
+  parsePath,
+  _Set as Set,
+  invokeWithErrorHandling,
+  noop,
+  isFunction
+} from '../util/index'
+import { traverse } from './traverse'
+import { queueWatcher } from './scheduler'
+import Dep, { pushTarget, popTarget, DepTarget } from './dep'
+import { DebuggerEvent, DebuggerOptions } from 'v3/debug'
+import type { SimpleSet } from '../util/index'
+import type { Component } from 'types/component'
+import { activeEffectScope, recordEffectScope } from 'v3/reactivity/effectScope'
+let uid = 0
+/**
+ * @internal
+ */
 export interface WatcherOptions extends DebuggerOptions {
   deep?: boolean
   user?: boolean
@@ -12,7 +32,6 @@ export interface WatcherOptions extends DebuggerOptions {
  * This is used for both the $watch() api and directives.
  * @internal
  */
-
 export default class Watcher implements DepTarget {
   vm?: Component | null
   expression: string
@@ -38,6 +57,12 @@ export default class Watcher implements DepTarget {
   onTrack?: ((event: DebuggerEvent) => void) | undefined
   onTrigger?: ((event: DebuggerEvent) => void) | undefined
   constructor(
+    vm: Component | null,
+    expOrFn: string | (() => any),
+    cb: Function,
+    options?: WatcherOptions | null,
+    isRenderWatcher?: boolean
+  ) {
     recordEffectScope(this, activeEffectScope || (vm ? vm._scope : undefined))
     recordEffectScope(
       this,
@@ -102,8 +127,13 @@ export default class Watcher implements DepTarget {
     let value
     const vm = this.vm
     try {
-      value = this.getter.call(vm, kasfhljkaw
-          ı347489203
+      value = this.getter.call(vm, vm)
+    } catch (e: any) {
+      if (this.user) {
+        handleError(e, vm, `getter for watcher "${this.expression}"`)
+      } else {
+        throw e
+      }
     } finally {
       // "touch" every property so they are all tracked as
       // dependencies for deep watching
