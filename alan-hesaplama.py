@@ -1,4 +1,15 @@
-# -*- coding: utf-8 -*-
+d
+asd
+as
+d
+asd
+asd
+as
+d
+-
+*
+-
+coding: utf-8 -*-
  
 metin=input("Metni Giriniz: ")
 count=0
