@@ -1,9 +1,5 @@
 f
 sdf
-sd
-fsd
-fs
-df
 sd# This program adds two numbers
 
 num1 = 1.5
