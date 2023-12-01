@@ -23,28 +23,7 @@ export class EffectScope {
    * record undetached scopes
    * @internal
    */
-  scopes: EffectScope[] | undefined
-  /**
-   * indicates this being a component root scope
-   * @internal
-   */
-  _vm?: boolean
-  /**
-   * track a child scope's index in its parent's scopes array for optimized
-   * removal
-   * @internal
-   */
-  private index: number | undefined
-
-  constructor(detached = false) {
-    if (!detached && activeEffectScope) {
-      this.parent = activeEffectScope
-      this.index =
-        (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(
-          this
-        ) - 1
-    }
-  }
+  
   run<T>(fn: () => T): T | undefined {
     if (this.active) {
       const currentEffectScope = activeEffectScope
@@ -839,6 +818,135 @@ describe('Dep', () => {
   })
 })
 
+
+
+
+import Dep from 'core/observer/dep'
+import Dep, { cleanupDeps } from 'core/observer/dep'
+
+describe('Dep', () => {
+  let dep
+  beforeEach(() => {
+    dep = new Dep()
+  })
+  describe('instance', () => {
+    it('should be created with correct properties', () => {
+      expect(dep.subs.length).toBe(0)
+      expect(new Dep().id).toBe(dep.id + 1)
+    })
+  })
+  describe('addSub()', () => {
+    it('should add sub', () => {
+      dep.addSub(null)
+      expect(dep.subs.length).toBe(1)
+      expect(dep.subs[0]).toBe(null)
+    })
+  })
+
+  describe('removeSub()', () => {
+    it('should remove sub', () => {
+      dep.subs.push(null)
+      dep.removeSub(null)
+      const sub = {}
+      dep.subs.push(sub)
+      dep.removeSub(sub)
+      expect(dep.subs.includes(sub)).toBe(false)
+
+      // nulled subs are cleared on next flush
+      cleanupDeps()
+      expect(dep.subs.length).toBe(0)
+    })
+  })
+  describe('depend()', () => {
+    let _target
+    beforeAll(() => {
+      _target = Dep.target
+    })
+    afterAll(() => {
+      Dep.target = _target
+    })
+    it('should do nothing if no target', () => {
+      Dep.target = null
+      dep.depend()
+    })
+    it('should add itself to target', () => {
+      Dep.target = { addDep: vi.fn() } as any
+      dep.depend()
+      expect(Dep.target!.addDep).toHaveBeenCalledWith(dep)
+    })
+  })
+  describe('notify()', () => {
+    it('should notify subs', () => {
+      dep.subs.push({ update: vi.fn() })
+      dep.notify()
+      expect(dep.subs[0].update).toHaveBeenCalled()
+    })
+  })
+})
+
+
+import Dep from 'core/observer/dep'
+import Dep, { cleanupDeps } from 'core/observer/dep'
+
+describe('Dep', () => {
+  let dep
+  beforeEach(() => {
+    dep = new Dep()
+  })
+  describe('instance', () => {
+    it('should be created with correct properties', () => {
+      expect(dep.subs.length).toBe(0)
+      expect(new Dep().id).toBe(dep.id + 1)
+    })
+  })
+  describe('addSub()', () => {
+    it('should add sub', () => {
+      dep.addSub(null)
+      expect(dep.subs.length).toBe(1)
+      expect(dep.subs[0]).toBe(null)
+    })
+  })
+
+  describe('removeSub()', () => {
+    it('should remove sub', () => {
+      dep.subs.push(null)
+      dep.removeSub(null)
+      const sub = {}
+      dep.subs.push(sub)
+      dep.removeSub(sub)
+      expect(dep.subs.includes(sub)).toBe(false)
+
+      // nulled subs are cleared on next flush
+      cleanupDeps()
+      expect(dep.subs.length).toBe(0)
+    })
+  })
+  describe('depend()', () => {
+    let _target
+    beforeAll(() => {
+      _target = Dep.target
+    })
+    afterAll(() => {
+      Dep.target = _target
+    })
+    it('should do nothing if no target', () => {
+      Dep.target = null
+      dep.depend()
+    })
+    it('should add itself to target', () => {
+      Dep.target = { addDep: vi.fn() } as any
+      dep.depend()
+      expect(Dep.target!.addDep).toHaveBeenCalledWith(dep)
+    })
+  })
+  describe('notify()', () => {
+    it('should notify subs', () => {
+      dep.subs.push({ update: vi.fn() })
+      dep.notify()
+      expect(dep.subs[0].update).toHaveBeenCalled()
+    })
+  })
+})
 
 
 
