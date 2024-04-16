@@ -1,3 +1,14 @@
+dasdas
+das
+das
+d
+asd
+asd
+
+
+
+
+
 package kodbloklari.com;
  
 import java.util.Scanner;

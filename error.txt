@@ -1,0 +1,26 @@
+`2023-12-01 13:25:35,435 INFO None None User 388 listing notifications, last notification check 29/11/2023 12:38:23
+{"asctime": "2023-12-01 13:25:35,507", "created": 1701437135.507065, "exc_info": "Traceback (most recent call last):
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py\", line 34, in inner
+    response = get_response(request)
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py\", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py\", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/contrib/auth/decorators.py\", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File \"/fn/edge-emi/web/web/views/index_view.py\", line 305, in notifications
+  File \"/fn/edge-emi/web/web/lib/helpers.py\", line 249, in notification_hr
+  File \"/fn/edge-emi/web/web/lib/helpers.py\", line 291, in notification_template_msg
+KeyError: 3099", "exc_text": null, "filename": "log.py", "funcName": "log_response", "levelname": "INFO", "levelno": 20, "lineno": 228, "module": "log", "message": "OK: /fn/notifications", "name": "django.request", "pathname": "/fn/pip/usr/local/lib/python3.6/site-packages/django/utils/log.py", "process": 27, "processName": "MainProcess", "stack_info": null, "thread": 139771624814336, "threadName": "Thread-139771624814336", "username": null, "method": null, "path": null, "status_code": 200, "request": "<WSGIRequest: GET '/fn/notifications?customer_id=368&page=1'>"}
+{"asctime": "2023-12-01 13:25:35,507", "created": 1701437135.507065, "exc_info": "Traceback (most recent call last):
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py\", line 34, in inner
+    response = get_response(request)
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py\", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py\", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)  File \"/fn/pip/usr/local/lib/python3.6/site-packages/django/contrib/auth/decorators.py\", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File \"/fn/edge-emi/web/web/views/index_view.py\", line 305, in notifications
+  File \"/fn/edge-emi/web/web/lib/helpers.py\", line 249, in notification_hr
+  File \"/fn/edge-emi/web/web/lib/helpers.py\", line 291, in notification_template_msg
+KeyError: 3099", "exc_text": null, "filename": "log.py", "funcName": "log_response", "levelname": "INFO", "levelno": 20, "lineno": 228, "module": "log", "message": "OK: /fn/notifications", "name": "django.request", "pathname": "/fn/pip/usr/local/lib/python3.6/site-packages/django/utils/log.py", "process": 27, "processName": "MainProcess", "stack_info": null, "thread": 139771624814336, "threadName": "Thread-139771624814336", "username": null, "method": null, "path": null, "status_code": 200, "request": "<WSGIRequest: GET '/fn/notifications?customer_id=368&page=1'>"}``
