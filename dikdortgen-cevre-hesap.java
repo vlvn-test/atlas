@@ -1,18 +1,7 @@
-dasdas
-das
-das
-d
-asd
-asd
-
-
-
-
-
 package kodbloklari.com;
  
 import java.util.Scanner;
-#hello
+
 public class Dıkdortgen {
      
     public static void main(String[] args) {
